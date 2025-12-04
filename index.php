@@ -6,6 +6,9 @@ if (!isset($_SESSION{'usuario_id'})) {
     header("Location: login.php");
     exit;
 }
+
+$usuario_id = $_SESSION['usuario_id'];
+$usuario_nome = $_SESSION['usuario_nome'];
 ?>
 
 <!DOCTYPE html>
@@ -18,5 +21,9 @@ if (!isset($_SESSION{'usuario_id'})) {
 </head>
 <body>
     <h1>Sistema Financeiro</h1>
+
+    <div>
+        <p>Bem-vindo, <strong> <?php $usuario_nome ?></strong></p>
+    </div>
 </body>
 </html>
