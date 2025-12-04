@@ -1,5 +1,7 @@
 <?php
 require_once 'config.php';
+require_once 'mensagens.php';
+
 
 if (isset($_SESSION['usuario_id'])) {
   header("Location: index.php");
@@ -20,6 +22,9 @@ if (isset($_SESSION['usuario_id'])) {
 
 <body>
   <h1>Login - Sistema Financeiro</h1>
+
+  <?php exibir_mensagem(); ?>
+
   <form action="autenticar.php" method="post">
     <div>
       <label for="email">E-mail:</label>
