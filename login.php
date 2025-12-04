@@ -1,11 +1,12 @@
 <?php
 require_once 'config.php';
 
-if (isset($_SESSION{
-'usuario_id'})) {
+if (isset($_SESSION['usuario_id'])) {
   header("Location: index.php");
   exit;
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +36,8 @@ if (isset($_SESSION{
 
 
   <p>Não tem conta? <a href="registro.php">Cadastre-se aqui.</a></p>
+
+
 </body>
 
 </html>

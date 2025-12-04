@@ -13,4 +13,9 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Erro na conexão com o banco de dados: " . $e->getMessage());
+} 
+
+// Iniciar sessao se ainda nao foi iniciada
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
 }
