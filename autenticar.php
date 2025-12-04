@@ -3,7 +3,8 @@ require_once 'config.php';
 require_once 'mensagens.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'] ?? '';
+    $email = $_POST['email'] ?? ''; 
+ 
     $senha = $_POST['senha'] ?? '';
     // echo "Email:$email - Senha:$senha";
 
@@ -31,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: index.php');
         exit;
     } else {
-        set_mensagem('E-mail ou senha incorreta', 'erro');
+        set_mensagem('E-mail ou senha incorreta X!', 'erro');
         header('Location: login.php');
         exit;
     }
