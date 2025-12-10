@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: index.php');
         exit;
     } else {
-        set_mensagem('E-mail ou senha incorreta X!', 'erro');
+        set_mensagem('E-mail ou senha incorreta ❌!', 'erro');
         header('Location: login.php');
         exit;
     }

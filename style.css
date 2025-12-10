@@ -1,19 +1,39 @@
 body {
     background-color: rgb(166, 228, 248);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
 }
 
-.mensagem{
- text-align: center;
- border: 4px solid;
+.login {
+    text-align: center;
+    border: 2px solid rgb(32, 94, 227);
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: rgb(116, 169, 212);
+    width: 700px;
+    margin: auto;
+    margin-top: 10%;
 }
 
-.mensagem-erro {
+input {
+    border-color: rgb(57, 78, 211);
+    border-radius: 4px;
+    background-color: rgb(184, 181, 242);
+}
+
+.button {
+    text-align: center;
+    border: 20px;
+}
+
+.mensagem {
+    text-align: center;
+    border: 4px solid;
+}
+
+/* .mensagem-erro {
     color: white;
     border-color:rgb(132, 29, 29);
     border-radius: 5px;
@@ -24,6 +44,34 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
 
+
+
+.alert-danger {
+    border-color: rgb(119, 25, 25);
+    border-radius: 5px;
+    background-color: rgb(253, 137, 137);
+    text-align: center;
 }
+
+.btn-primary {
+    background-color: rgb(21, 140, 219);
+}
+
+.container {
+    text-align: center;
+    border: 2px solid rgb(32, 94, 227);
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: rgb(116, 169, 212);
+    width: 700px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.btn-container {
+    padding: 10px;
+}
+
