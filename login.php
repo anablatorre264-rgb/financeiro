@@ -26,9 +26,8 @@ if (isset($_SESSION['usuario_id'])) {
 
   <div class="login">
     <h1>Login - Sistema Financeiro</h1>
+
     <?php exibir_mensagem(); ?>
-
-
 
     <form action="autenticar.php" method="post">
       <div class="email">
@@ -42,14 +41,12 @@ if (isset($_SESSION['usuario_id'])) {
       </div>
       <br>
       <div>
-        <button class="btn btn-primary" type="submit" >Entrar</button>
+        <button class="btn btn-primary" type="submit">Entrar</button>
       </div>
 
     </form>
 
-
     <p>Não tem conta? <a href="registro.php">Cadastre-se aqui.</a></p>
-
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
