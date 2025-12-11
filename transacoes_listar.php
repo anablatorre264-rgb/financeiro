@@ -49,35 +49,30 @@ $categorias = $stmt_categorias->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transações - Sistema Financeiro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <?php include 'navbar.php' ?>
+
+    <div class="container">
     <h1>Sistema Financeiro Pessoal</h1>
-    
-    <div>
-        <p>Bem-vindo, <strong><?php echo htmlspecialchars($usuario_nome); ?></strong></p>
-        <a href="logout.php">Sair</a>
-    </div>
-    
+
     <?php exibir_mensagem(); ?>
-    
-    <nav>
-        <ul>
-            <li><a href="index.php">Dashboard</a></li>
-            <li><a href="categorias_listar.php">Categorias</a></li>
-            <li><a href="transacoes_listar.php">Transações</a></li>
-        </ul>
-    </nav>
-    
+
     <h2>Transações</h2>
-    
+
     <div>
         <a href="transacoes_formulario.php">Nova Transação</a>
     </div>
-    
+
+    <div class="filtros">
     <h3>Filtros</h3>
     <form method="GET" action="transacoes_listar.php">
         <div>
@@ -88,26 +83,28 @@ $categorias = $stmt_categorias->fetchAll();
                 <option value="despesa" <?php echo $filtro_tipo === 'despesa' ? 'selected' : ''; ?>>Despesa</option>
             </select>
         </div>
-        
+
         <div>
             <label for="categoria">Categoria:</label>
             <select id="categoria" name="categoria">
                 <option value="">Todas</option>
                 <?php foreach ($categorias as $categoria): ?>
-                    <option value="<?php echo $categoria['id_categoria']; ?>" 
-                            <?php echo $filtro_categoria == $categoria['id_categoria'] ? 'selected' : ''; ?>>
+                    <option value="<?php echo $categoria['id_categoria']; ?>"
+                        <?php echo $filtro_categoria == $categoria['id_categoria'] ? 'selected' : ''; ?>>
                         <?php echo htmlspecialchars($categoria['nome']); ?>
                     </option>
                 <?php endforeach; ?>
             </select>
         </div>
-        
+
         <div>
-            <button type="submit">Filtrar</button>
+            <button class="btn btn-primary" type="submit">Filtrar</button>
             <a href="transacoes_listar.php">Limpar Filtros</a>
         </div>
     </form>
-    
+
+    </div>
+
     <?php if (count($transacoes) > 0): ?>
         <table class="table">
             <thead>
@@ -130,8 +127,8 @@ $categorias = $stmt_categorias->fetchAll();
                         <td>R$ <?php echo number_format($transacao['valor'], 2, ',', '.'); ?></td>
                         <td>
                             <a href="transacoes_formulario.php?id=<?php echo $transacao['id_transacao']; ?>">Editar</a>
-                            <a href="transacoes_excluir.php?id=<?php echo $transacao['id_transacao']; ?>" 
-                               onclick="return confirm('Tem certeza que deseja excluir esta transação?');">Excluir</a>
+                            <a href="transacoes_excluir.php?id=<?php echo $transacao['id_transacao']; ?>"
+                                onclick="return confirm('Tem certeza que deseja excluir esta transação?');">Excluir</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -140,5 +137,11 @@ $categorias = $stmt_categorias->fetchAll();
     <?php else: ?>
         <p>Nenhuma transação encontrada.</p>
     <?php endif; ?>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
+</body>
+
 </html>

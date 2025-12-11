@@ -1,52 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap');
-
 body {
-    color: white;
     background-color: rgb(166, 228, 248);
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
-    font-family: "Geom", sans-serif;
-    margin-bottom: 10%;
+    
 }
-
-/* navbar */
-
-h2,
-p {
-    margin: 10px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
-}
-
-ul li {
-    float: left;
-}
-
-ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-ul li a:hover:not(.active) {
-    background-color: #111111;
-}
-
-ul li a.active {
-    background-color: #04AA6D;
-}
-
-/* navbar */
 
 .login {
     text-align: center;
@@ -71,7 +30,7 @@ input {
     border: 20px;
 }
 
-.mensagem {
+.mensagem{
     text-align: center;
     border: 4px solid;
 }
@@ -139,20 +98,4 @@ input {
 
 .registro div {
     padding: 10px;
-}
-
-.filtros {
-    padding: 20px;
-}
-
-.salvar {
-    padding: 20px;
-}
-
-.categoria {
-    padding: 30px;
-}
-
-.salv {
-    margin: 20px;
 }

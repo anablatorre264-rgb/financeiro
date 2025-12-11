@@ -56,25 +56,12 @@ $ultimas_transacoes = $stmt_ultimas->fetchAll();
 </head>
 
 <body>
-
     <?php include 'navbar.php' ?>
+
     <div class="container">
         <h1>Sistema Financeiro</h1>
 
-        <div>
-            <p>Bem-vindo, <strong> <?php echo $usuario_nome ?></strong></p>
-            <a href="logout.php">Sair</a>
-        </div>
-
         <?php exibir_mensagem(); ?>
-
-        <nav>
-            <ul>
-                <li><a href="index.php">Dashboard</a></li>
-                <li><a href="categorias_listar.php">Categorias</a></li>
-                <li><a href="transacoes_listar.php">Transações</a></li>
-            </ul>
-        </nav>
 
         <h2>Resumo Financeiro</h2>
 

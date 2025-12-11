@@ -16,7 +16,7 @@ if (isset($_SESSION['usuario_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Sistema Financeiro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-login.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@ if (isset($_SESSION['usuario_id'])) {
         <?php exibir_mensagem(); ?>
 
         <form action="registrar.php" method="POST">
-            <div>
+            <div >
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
             </div>

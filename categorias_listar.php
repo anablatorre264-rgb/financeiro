@@ -32,8 +32,8 @@ $categorias = $stmt->fetchAll();
 </head>
 
 <body>
-
     <?php include 'navbar.php'?>
+
     <div class="container">
 
         <?php exibir_mensagem(); ?>
